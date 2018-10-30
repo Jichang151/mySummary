@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+    <!-- <meta charset="utf-8" /> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>Page Title</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    
+</head>
+<body>
+    <button type="button" id="btn">升序：</button>
+    <input type="text" id="str" name="shi" placeholder="请输入数字并以逗号隔开！">
+    <span id="show"></span>
+    <script>
+        var oStr = document.getElementById('str');
+        
+        // var oShow = document.getElementById('show');
+        var oBtn = document.getElementById('btn');
+        // var oArr = oStr.value.split(',');
+        function quickSort(arr){
+            if(arr.length <=1){
+                return arr;
+            }
+             var pivotIndex=Math.floor(arr.length/2);
+            //找基准，并把基准从原数组删除
+            var pivot=arr.splice(pivotIndex,1)[0];
+            var left = [];
+            var right = [];
+            for(var i = 0; i < arr.length; i++){
+                if(arr[i] <= pivot){
+                    left.push(arr[i]);
+                }else{
+                    right.push(arr[i]);
+                }
+            }
+            //从小到大（升序）
+            return quickSort(left).concat([pivot],quickSort(right));
+            //从大到小
+            // return quickSort(right).concat([pivot],quickSort(left));
+        }    
+        oBtn.onclick = function(){
+            oStr.value= quickSort(oStr.value.split(','));
+            console.log(oStr.value);
+            // console.log(oStr.value.split(','));
+        }
+        
+    </script>
+</body>
+</html>
