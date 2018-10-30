@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>三击事件</title>
+    </head>
+    <body id="body">
+        <h1>我是测试1</h1>
+            </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>v</br></br></br>
+        <h1>我是测试2</h1>
+    </body>
+    <script>
+        var body = document.getElementById('body');
+        var count = 0;
+        
+        
+        
+        body.addEventListener('click',function(){
+            count++;
+            // var myDate = new Date();
+            // var time = myDate.toLocaleTimeString().slice(2);
+            
+            // console.log(time);
+            var t = setTimeout(function(){
+                if(count == 3){
+                    // console.log(count);
+                    console.log("triple click!")
+                    scrollTo(0,0);
+                count = 0;
+
+                }else{
+                    // console.log(count);
+                count = 0;
+
+                }
+            },500)
+            // count = 0;
+        })
+        // count = 0;
+    </script>
+</html>
