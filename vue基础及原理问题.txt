@@ -1,0 +1,9 @@
+vue响应式原理（数据双向绑定）
+object.defineProperty()
+vue-router:
+vue为什么要写在return{data:{}}里？
+防止组件间变量污染；
+组件间通讯？
+父传子：props
+子传父：$emit
+兄弟间：bus （VueX）

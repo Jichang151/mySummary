@@ -1,0 +1,11 @@
+1、通过 . 赋值（不解释）
+2、通过 [] 赋值 
+var twoSum = function(nums, target){
+    var arr = {}
+    for(var i=0;i<nums.length;i++){
+        arr[target-nums[i]] = i;
+        if(arr[nums[i]] !== undefined）{
+            return [arr[nums[i]],i];
+        }
+    }
+}

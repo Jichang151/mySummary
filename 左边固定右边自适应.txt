@@ -1,0 +1,11 @@
+左边固定右边自适应
+1、浮动
+.left{		width:200px;float:left;}	
+.right{	width:100%;}
+2、定位
+.left{		width:200px;position:relatetive;}
+.right{	width:100%;padding-left:200px;}
+3、弹性布局（flex）
+.parent{	display:flex;}
+.left{		width:200px;}
+.right{	flex:1;}
